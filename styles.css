@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#project-title {
+    color: rgb(80, 80, 230);
+}
+
+header {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.menu {
+    padding: 5px;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.menu a {
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: lightgray;
+}
+
+main {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 1px solid black;
+}
