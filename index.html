@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!--head contains website metadata-->
     <meta charset="UTF-8">
     <title>My Research Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Shared site title and navigation links. appears on all pages and contains clickable inline list of links that point to other pages -->
     <header>
-        <h1 id="project-title">The Web Browser</h1>
-        <nav>
+        <h1 id="project-title">The Web Browser 
+            <img  src="images/titleimage.png" 
+            alt="Collection of web browser logos">
+        </h1>
+        <nav> <!--semantic tag highlights this a navigation bar-->
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="topic1.html">Topic 1</a></li>
@@ -22,11 +25,48 @@
     </header>
 
     <main>
+        <!-- Introduce the research topic and summarize the site contents. -->
         <h2>Abstract</h2>
-        <p>This webpage explores basic components of web browsers and how the web browser has evolved over the years since its inception in the 1990s.</p>
+        <p> This webpage explores the evolution of web browsers over time and the fundamental elements of web browsing architecture. In this webpage, we detail how web browsers function as client-side applications that 
+            request,interpret, and render data from servers. We also go through the history of the web browser from its inception in the early 1990s to today and what we can expect in the future. </p>
 
+        <!-- Link visitors to the site's main content pages. -->
+        <h2>Table of Contents</h2>
+        <!--Use of table to add structure to Table of Contents-->
+        <table class="contents-table">
+            <thead> <!--Top columns represent the labels -->
+                <tr> 
+                    <th scope="col">Page</th>
+                    <th scope="col">What you'll find</th>
+                </tr>
+            </thead>
+            <tbody> <!--these define the rows in the table-->
+                <tr> <!--table of contents also have links to other content-->
+                    <td><a href="topic1.html">Topic 1</a></td>
+                    <td>The history and evolution of web browsers</td>
+                </tr>
+                <tr>
+                    <td><a href="topic2.html">Topic 2</a></td>
+                    <td>Web browser concepts and how browsers work</td>
+                </tr>
+                <tr>
+                    <td><a href="key-concepts.html">Key Concepts</a></td>
+                    <td>Important terms used in the research</td>
+                </tr>
+                <tr>
+                    <td><a href="references.html">References</a></td>
+                    <td>Sources used in the project</td>
+                </tr>
+                <tr>
+                    <td><a href="about.html">About Me</a></td>
+                    <td>Information about me and the project</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Define important vocabulary used in the project. -->
         <h3>Key Terms</h3>
-        <ul>
+        <ul> <!--unordered list. uses bullet points to seperate key terms-->
             <li> Web Browser: A software application used to access and view websites on the internet. </li>
             <li> HTML: Hypertext Markup Language, the standard language used to create and design web pages. </li>
             <li> CSS: Cascading Style Sheets, a language used to describe the presentation and formatting of web pages. </li>
@@ -36,9 +76,10 @@
         </ul>
     </main>
 
+    <!-- Provide a link to the course website. -->
     <footer>
-        <p>Link to Github Repository:
-        <a href="https://github.com/oarceKSU/oarceksu.github.io">Course Website</a></p>
+        <p>Link to Class Website:
+        <a href="https://ksuweb.github.io/IT3203/">IT3203 Intro to Web Dev</a></p>
     </footer>
 </body>
 </html>

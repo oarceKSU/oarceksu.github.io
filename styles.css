@@ -1,43 +1,84 @@
+/* Apply the same base font and outer spacing to the whole page. */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: Arial, sans-serif; /* Use Arial, or a similar sans-serif font if Arial is unavailable. */
+    margin: 20px; /* Keep the page content 20 pixels away from the edges of the browser window. */
 }
 
+/* Place the project title and its logo side by side and align them vertically. */
 #project-title {
-    color: rgb(80, 80, 230);
+    align-items: center; /* Center the title and logo along the row's vertical axis. */
+    color: rgb(80, 80, 230); /* Give the title text a blue/purple color. */
+    display: flex; /* Make the title and logo children line up in a row. */
+    gap: 12px; /* Leave 12 pixels of space between the title and logo. */
 }
 
+/* Set a logo height without stretching its original shape. */
+#project-title img {
+    height: 48px; /* Display the logo 48 pixels tall. */
+    width: auto; /* Calculate the width automatically to preserve the image's proportions. */
+}
+
+/* Add space inside the header and draw a divider below it. */
 header {
-    padding: 10px;
-    border-bottom: 1px solid black;
+    padding: 10px; /* Keep the header contents 10 pixels away from its edges. */
+    border-bottom: 1px solid black; /* Draw a thin black line along the bottom of the header. */
 }
 
+/* Add a small amount of padding space around the navigation list. */
 .menu {
-    padding: 5px;
+    padding: 5px; /* Keep the list items 5 pixels away from the list's edges. */
 }
 
 .menu li {
-    display: inline;
-    margin-right: 15px;
+    display: inline; /* Place each navigation item on the same line. */
+    margin-right: 15px; /* Separate each item from the next by 15 pixels. */
 }
 
 .menu a {
-    padding: 6px 10px;
-    text-decoration: none;
+    padding: 6px 10px; /* Add 6 pixels of vertical and 10 pixels of horizontal space inside each link. */
+    text-decoration: none; /* Removes the browser's default underline on the link. */
 }
 
+/* uses selector to add a hover effect to text. */
 .menu a:hover {
-    background-color: lightgray;
+    background-color: lightgray; /* Show a light gray background when the pointer is over a link. */
 }
 
+/* Separate the main content from the header and give it room inside its edges. */
 main {
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 20px; /* Leave 20 pixels between the main content and the section above it. */
+    padding: 15px; /* Keep the main content 15 pixels away from the edges of this section. */
 }
 
+/* Set a readable width and spacing for contents and concept tables. */
+.contents-table {
+    border-collapse: collapse; /* Join neighboring cell borders into single lines. */
+    margin: 10px 0 25px; /* Add 10 pixels above and 25 pixels below the table, with no side margin. */
+    max-width: 100%; /* Prevent the table from becoming wider than its containing element. */
+    width: 1000px; /* Set the table's preferred width to 1000 pixels. */
+}
 
+.contents-table th,
+.contents-table td {
+    border: 1px solid #999; /* Outline every heading and data cell with a thin gray border. */
+    padding: 8px 12px; /* Add 8 pixels of vertical and 12 pixels of horizontal space inside each cell. */
+    text-align: left; /* Align the text to the left side of each cell. */
+}
+
+.contents-table th {
+    background-color: #f0f0f0; /* Shade heading cells light gray to distinguish them from data cells. */
+}
+
+/* Limit concept images to 400 pixels wide while allowing them to shrink on smaller screens. */
+.concept-image {
+    height: auto; /* Adjust the height with the width so the image keeps its proportions. */
+    max-width: 100%; /* Let the image shrink if its container is narrower than 400 pixels. */
+    width: 400px; /* Set the image's preferred display width to 400 pixels. */
+}
+
+/* Separate the footer from the main content and draw a divider above it to highlight seperation of sections. */
 footer {
-    margin-top: 30px;
-    padding: 10px;
-    border-top: 1px solid black;
+    margin-top: 30px; /* Leave 30 pixels between the footer and the content above it. */
+    padding: 10px; /* Keep the footer contents 10 pixels away from its edges. */
+    border-top: 1px solid black; /* Draw a thin black line along the top of the footer. */
 }
