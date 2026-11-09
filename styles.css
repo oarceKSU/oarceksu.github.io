@@ -1,7 +1,7 @@
 /* Apply the same base font and outer spacing to the whole page. */
 body {
     font-family: Arial, sans-serif; /* Use Arial, or a similar sans-serif font if Arial is unavailable. */
-    margin: 20px; /* Keep the page content 20 pixels away from the edges of the browser window. */
+    margin: 20px 20px 20px 220px; /* Shift the page right while keeping space at the edges. */
 }
 
 /* Place the project title and its logo side by side and align them vertically. */
@@ -46,6 +46,7 @@ header {
 
 /* Separate the main content from the header and give it room inside its edges. */
 main {
+    max-width: 1280px; /* Prevent the main content from becoming wider than 1280 pixels. */
     margin-top: 20px; /* Leave 20 pixels between the main content and the section above it. */
     padding: 15px; /* Keep the main content 15 pixels away from the edges of this section. */
 }
@@ -55,7 +56,56 @@ main {
     border-collapse: collapse; /* Join neighboring cell borders into single lines. */
     margin: 10px 0 25px; /* Add 10 pixels above and 25 pixels below the table, with no side margin. */
     max-width: 100%; /* Prevent the table from becoming wider than its containing element. */
-    width: 1000px; /* Set the table's preferred width to 1000 pixels. */
+    width: 500px; /* Set the table's preferred width to 500 pixels. */
+}
+
+/* Place the contents table beside its image gallery on wider screens. */
+.contents-layout {
+    align-items: stretch;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(420px, 0.8fr) minmax(0, 1.2fr);
+    max-width: 1280px;
+}
+
+/* Let the contents table use its share of the layout instead of a fixed width. */
+.contents-layout .contents-table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Keep the browsing photos side by side keeps it inline with the TOC table. */
+.contents-gallery {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 10px;
+    min-height: 0;
+}
+
+/* Crop photos consistently to fill their gallery cells without distortion. */
+.contents-gallery img {
+    border-radius: 8px;
+    display: block;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Stack the table and gallery on narrow screens and restore compact page margins. */
+@media (max-width: 760px) {
+    body {
+        margin-left: 20px;
+    }
+
+    .contents-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contents-gallery {
+        max-width: 600px;
+    }
 }
 
 .contents-table th,
@@ -81,4 +131,63 @@ footer {
     margin-top: 30px; /* Leave 30 pixels between the footer and the content above it. */
     padding: 10px; /* Keep the footer contents 10 pixels away from its edges. */
     border-top: 1px solid black; /* Draw a thin black line along the top of the footer. */
+}
+
+/* These rules style the quiz elements created by quiz.js. */
+#quiz fieldset {
+    border: 0; /* Remove the default box so each question looks like a simple group. */
+    margin: 0 0 20px; /* Separate one question from the next. */
+    padding: 0; /* Align question content with the rest of the quiz. */
+}
+
+#quiz legend {
+    font-weight: bold; /* Make question text stand out from its answer choices. */
+    margin-bottom: 8px; /* Add space between the question and its choices. */
+}
+
+/* Make the countdown easy to spot and keep its digits from shifting as they change. */
+#quiz-timer {
+    font-size: 2rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: bold;
+    margin: 12px 0 0;
+    text-align: right;
+}
+
+/* Use green color to distinguish a passing score and correct answers in the review. */
+#quiz .grade-pass,
+#quiz .answer-correct {
+    color: #09d350;
+}
+
+/* Use red to distinguish a failing score and incorrect answers. */
+#quiz .grade-fail,
+#quiz .answer-incorrect {
+    color: #e60d18;
+}
+
+/* Make the check or X marker more visible beside each reviewed question. */
+#quiz .answer-marker {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Keep the user's answer black so it remains distinct from the colored correct answer. */
+#quiz .answer-submitted {
+    color: #000;
+}
+
+/* Indent the ordered list so its numbers and review text are easy to scan. */
+#quiz .answer-review {
+    padding-left: 2rem;
+}
+
+/* Separate each question's review from the next one. */
+#quiz .answer-review li {
+    margin-bottom: 16px;
+}
+
+/* Keep the question and answer lines close together within each review item. */
+#quiz .answer-review p {
+    margin: 4px 0;
 }
