@@ -14,4 +14,4 @@ Along with building the quiz, I added CSS to style its structure and make the ti
 
 I expanded the research and explanations on the History of the Web Browser and Key Concepts pages so they provide more detail. Across the site, I refined the layout and organization to make the pages more polished and easier to follow instead of leaving them with a plain, unfinished appearance.
 
-I experimented with inline CSS on a few images to adjust their presentation directly in the HTML. Finally, I added a footer notice identifying the website as a school project.
+I added a few more images, and I experimented with inline CSS on a few images to adjust their presentation directly in the HTML. Finally, I added a footer notice identifying the website as a school project.
