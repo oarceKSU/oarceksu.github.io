@@ -20,6 +20,8 @@ body {
 
 /* Add space inside the header and draw a divider below it. */
 header {
+    box-sizing: border-box;
+    max-width: 1280px;
     padding: 10px; /* Keep the header contents 10 pixels away from its edges. */
     border-bottom: 1px solid black; /* Draw a thin black line along the bottom of the header. */
 }
@@ -35,7 +37,9 @@ header {
 }
 
 .menu a {
-    padding: 6px 10px; /* Add 6 pixels of vertical and 10 pixels of horizontal space inside each link. */
+    display: inline-block; /* Let the larger clickable area keep its full height. */
+    font-size: 1.1rem; /* Make navigation labels easier to read. */
+    padding: 10px 14px; /* Enlarge the navigation highlight boxes. */
     text-decoration: none; /* Removes the browser's default underline on the link. */
 }
 
@@ -128,6 +132,8 @@ main {
 
 /* Separate the footer from the main content and draw a divider above it to highlight seperation of sections. */
 footer {
+    box-sizing: border-box;
+    max-width: 1280px;
     margin-top: 30px; /* Leave 30 pixels between the footer and the content above it. */
     padding: 10px; /* Keep the footer contents 10 pixels away from its edges. */
     border-top: 1px solid black; /* Draw a thin black line along the top of the footer. */
