@@ -139,6 +139,8 @@ footer {
     border-top: 1px solid black; /* Draw a thin black line along the top of the footer. */
 }
 
+/* Milestone 2 Quiz CSS */
+
 /* These rules style the quiz elements created by quiz.js. */
 #quiz fieldset {
     border: 0; /* Remove the default box so each question looks like a simple group. */
