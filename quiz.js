@@ -272,6 +272,6 @@ form.addEventListener("reset", function () {
     startTimer();
 });
 
-/* Add the score and review to the existing form, then start the timer. */
+/* Add the score and review to the existing form. */
 form.append(result, review);
 startTimer();
