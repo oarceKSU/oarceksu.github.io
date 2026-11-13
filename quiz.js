@@ -6,7 +6,7 @@
 
 const questions = [
     {
-        question: "Fill in the blank: A browser uses a ____ to locate a specific webpage.",
+        question: "Fill in the blank: A browser uses a ____ to locate a specific webpage. Hint: 3 Letters",
         answer: "URL",
         type: "text"
     },
